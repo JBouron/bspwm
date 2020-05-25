@@ -68,4 +68,8 @@ void add_subscriber(FILE *stream, char* fifo_path, int field, int count);
 int print_report(FILE *stream);
 void put_status(subscriber_mask_t mask, ...);
 
+/* Remove any subscriber for which the stream as been closed and is no longer
+ * writable. */
+void prune_dead_subscribers();
+
 #endif
